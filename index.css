@@ -1,0 +1,314 @@
+/* ============ Navbar Base ============ */
+:root {
+  --nav-h: 64px;
+  --bg: #e7d0a6;          /* dunkles Beige */
+  --bg-2: #c8ae76;        /* noch dunkleres Beige */
+  --text: #2d2618;        /* sehr dunkles Braun für Text */
+  --text-dim: #5c4a2d;    /* etwas helleres Braun */
+  --accent: #a38f6d;      /* helles Beige für Akzente */
+  --focus: 2px solid #e2c799;
+}
+
+* { box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.nav {
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(180deg, var(--bg-2), var(--bg));
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  backdrop-filter: blur(8px);
+}
+
+.nav__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: var(--nav-h);
+  display: grid;
+  grid-template-columns: 1fr auto; /* brand | controls */
+  align-items: center;
+  padding: 0 16px;
+  gap: 12px;
+  color: var(--text);
+}
+
+.nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.nav__brand-text {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.nav__logo { height: 28px; width: auto; }
+
+/* Links (desktop) */
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav__link,
+.footer__link {
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: color .2s, background-color .2s, transform .1s;
+}
+.nav__link:hover,
+.footer__link:hover,
+.nav__link:focus-visible {
+  color: var(--text);
+  background: rgba(255,255,255,0.06);
+  outline: none;
+}
+.nav__link:active { transform: translateY(1px); }
+
+/* CTA link style */
+.nav__cta {
+  color: #0b1220;
+  background: var(--accent);
+  font-weight: 600;
+}
+.nav__cta:hover,
+.nav__cta:focus-visible {
+  background: var(--accent); /* green-600 */
+  color: #06101a;
+}
+
+/* Mobile toggle button */
+.nav__toggle {
+  display: none; /* hidden on desktop by default */
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  height: 38px;
+  width: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 0 6px;
+  color: var(--text);
+}
+.nav__toggle:focus-visible { outline: var(--focus); }
+
+.nav__bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+/* ============ Mobile Layout ============ */
+@media (max-width: 800px) {
+  .nav__inner {
+    grid-template-columns: auto auto; /* brand | toggle */
+  }
+  .nav__toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav__menu {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 10px 8px 14px;
+  }
+  /* collapsed by default */
+  .nav__menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .25s ease, opacity .2s ease;
+  }
+  /* expanded state */
+  .nav--open #nav-menu {
+    max-height: 300px; /* enough for a few links */
+    opacity: 1;
+  }
+}
+
+.category {
+  text-align: center;
+  margin: 48px 0 24px 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Projekt-Karten */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
+.proj {
+  background: #f5ecd6;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(80, 60, 20, 0.08);
+  padding: 24px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.proj:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(80, 60, 20, 0.13);
+}
+.proj img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  object-fit: cover;
+  max-height: 180px;
+}
+.proj h3 {
+  margin: 0 0 8px 0;
+  color: var(--text);
+}
+.proj p {
+  margin-bottom: 8px;
+  color: var(--text-dim);
+}
+.proj ul {
+  padding-left: 18px;
+  margin: 0;
+  color: var(--text-dim);
+}
+
+/* ============ Kontaktformular ============ */
+.contactform {
+  background: #f5ecd6;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(80, 60, 20, 0.08);
+  max-width: 420px;
+  margin: 48px auto 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.contactform h3 {
+  margin-bottom: 12px;
+  color: var(--text);
+    text-align: center; 
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2c799;
+  border-radius: 8px;
+  background: #fffaf3;
+  color: var(--text);
+  margin-bottom: 12px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+#contact-form textarea {
+  min-height: 80px;
+  max-height: 200px;
+}
+
+#contact-form button {
+  background: var(--accent);
+  color: #2d2618;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+    align-self: center;
+}
+
+#contact-form button:hover,
+#contact-form button:focus-visible {
+  background: #d7be86;
+}
+
+/* === FOOTER STYLING === */
+.footer {
+  background-color: var(--bg-2);
+  color: #ecf0f1;
+  padding: 60px 0 30px 0;
+  margin-top: auto; /* Für Sticky Footer */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 30px 20px;
+  gap: 40px;
+}
+
+/* === GENERAL INFO SECTION === */
+.general_info h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.general_info h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--bg);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.general_info a {
+  display: inline-block;
+  background-color: var(--text-dim); /* LinkedIn Blau */
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.general_info a:hover {
+  background-color: var(--text-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-end;          /* Navigation rechts */
+  text-align: right;
+}
