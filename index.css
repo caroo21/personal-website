@@ -2,9 +2,9 @@
 :root {
   --nav-h: 64px;
   --bg: #e7d0a6;          /* dunkles Beige */
-  --bg-2: #c8ae76;        /* noch dunkleres Beige */
+  --bg-2: #645431;        /* noch dunkleres Beige */
   --text: #2d2618;        /* sehr dunkles Braun für Text */
-  --text-dim: #5c4a2d;    /* etwas helleres Braun */
+  --text-dim: #a89068;    /* etwas helleres Braun */
   --accent: #a38f6d;      /* helles Beige für Akzente */
   --focus: 2px solid #e2c799;
 }
@@ -70,6 +70,11 @@ body {
   border-radius: 8px;
   transition: color .2s, background-color .2s, transform .1s;
 }
+
+.nav__link{
+  color: #06101a;
+}
+
 .nav__link:hover,
 .footer__link:hover,
 .nav__link:focus-visible {
