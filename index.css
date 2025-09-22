@@ -52,6 +52,7 @@ body {
 .nav__brand-text {
   font-weight: 700;
   letter-spacing: 0.2px;
+  color:#fffaf3;
 }
 .nav__logo { height: 28px; width: auto; }
 
@@ -153,10 +154,82 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Projekt-Karten */
+/*Home*/
+.Home {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
+/* Bild links */
+.Home img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;          /* Leicht abgerundet */
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Text-Bereich rechts */
+.Home div {
+  flex: 1;                      /* Nimmt restlichen Platz */
+}
+
+.home__text{
+  display: flex;
+  flex-direction: column;
+}
+
+.Home h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.Home h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-dim);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.Home p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.Home a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.Home a:hover {
+  text-decoration: underline;
+}
+
+/* Projekt-Karten 
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 0 16px;
+  justify-items: center;
+}*/
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 32px;
   max-width: 1100px;
   margin: 48px auto;
@@ -169,6 +242,7 @@ body {
   box-shadow: 0 4px 24px rgba(80, 60, 20, 0.08);
   padding: 24px 20px 20px 20px;
   display: flex;
+  width: 320px;  
   flex-direction: column;
   align-items: flex-start;
   transition: transform 0.15s, box-shadow 0.15s;
@@ -198,24 +272,94 @@ body {
   color: var(--text-dim);
 }
 
+
+/*Karusel*/
+.skills-carousel {
+  position: relative;
+  max-width: 1100px;
+  overflow: hidden;
+  background: linear-gradient(135deg, --bg-2 0%, --bg 100%);
+  border-radius: 15px;
+  padding: 20px 0;
+  margin: 48px auto;
+  --card-width: 350px;
+  --gap: 30px;
+  --total-cards: 8;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 10s linear infinite;
+  gap: var(--gap);
+  width: max-content;
+}
+
+.skill-card {
+  width: var(--card-width);
+  padding: 30px;
+  background: var(--bg-2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); 
+}
+
+.skill-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Endlos-Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc((var(--card-width) + var(--gap)) * var(--total-cards) * -1));
+  }
+}
+
+/* Pause beim Hover */
+.skills-carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/* Smooth Übergang */
+.carousel-track {
+  transition: animation-play-state 0.3s ease;
+}
+
 /* ============ Kontaktformular ============ */
 .contactform {
   background: #f5ecd6;
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(80, 60, 20, 0.08);
   max-width: 420px;
-  margin: 48px auto 0 auto;
+  margin: 48px auto 48px auto;
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-items: center;
+
 }
 
 .contactform h3 {
   margin-bottom: 12px;
   color: var(--text);
-    text-align: center; 
+  text-align: left; 
 }
 
 #contact-form input,
@@ -246,7 +390,8 @@ body {
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.2s;
-    align-self: center;
+  align-self: center;
+  margin-top: 12px;
 }
 
 #contact-form button:hover,
@@ -255,24 +400,29 @@ body {
 }
 
 /* === FOOTER STYLING === */
+
 .footer {
   background-color: var(--bg-2);
   color: #ecf0f1;
-  padding: 60px 0 30px 0;
-  margin-top: auto; /* Für Sticky Footer */
+  width: 100%;           /* ← Volle Breite */
+  padding: 60px 0 30px 0; /* ← Kein seitliches Padding am Container */
 }
 
-.footer {
+.footer__inner {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px 30px 20px;
+  max-width: 1200px;     /* ← Inhalt begrenzen */
+  margin: 0 auto;        /* ← Inhalt zentrieren */
+  padding: 0 20px;       /* ← Seitliches Padding nur am Inhalt */
   gap: 40px;
 }
 
 /* === GENERAL INFO SECTION === */
+.general_info{
+  flex: 1;
+}
+
 .general_info h3 {
   font-size: 1.8rem;
   font-weight: 600;
@@ -305,7 +455,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.footer div:last-child {
+.footer__links {
   display: flex;
   flex-direction: column;
   gap: 15px;
