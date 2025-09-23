@@ -136,6 +136,8 @@ body {
     grid-template-columns: 1fr;
     gap: 4px;
     padding: 10px 8px 14px;
+    justify-items: center;  /* Zentriert die Inhalte horizontal */
+    text-align: center;
   }
   /* collapsed by default */
   .nav__menu {
@@ -148,6 +150,22 @@ body {
   .nav--open #nav-menu {
     max-height: 300px; /* enough for a few links */
     opacity: 1;
+     background: linear-gradient(180deg, var(--bg-2), var(--bg));
+  }
+
+  .Home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .Home p{
+    text-align: center;
+  }
+  .Home h1{
+    text-align: center;
+  }
+  .Home h2{
+    text-align: center;
   }
 }
 
@@ -219,17 +237,6 @@ body {
 .Home a:hover {
   text-decoration: underline;
 }
-
-/* Projekt-Karten 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
-  max-width: 1100px;
-  margin: 48px auto;
-  padding: 0 16px;
-  justify-items: center;
-}*/
 
 .projects {
   display: flex;

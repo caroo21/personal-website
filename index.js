@@ -27,6 +27,14 @@ if (btn && menu) {
       btn.setAttribute('aria-expanded', 'false');
     }
   });
+  menu.querySelectorAll('.nav__link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (nav.classList.contains('nav--open')) {
+        nav.classList.remove('nav--open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
 }
 
 // EmailJS initialisieren
