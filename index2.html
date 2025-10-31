@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Caroline Wendlandt</title>
+        <meta name="description" content="Kurze Seitenbeschreibung." />
+        <link rel="icon" href="favicon.ico" />
+        <link rel="canonical" href="https://www.carolinewendlandt.com/" />
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+        <script src="index.js" defer></script>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script type="application/ld+json">
+            {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Caroline Wendlandt",
+            "url": "https://www.carolinewendlandt.com/",
+            "image": "https://www.carolinewendlandt.com/home_caro.jpeg",
+            "jobTitle": "Electrical Engineering Student",
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Technische Universität München",
+                "sameAs": "https://www.tum.de/"
+            },
+            "description": "Electrical Engineering student at TUM. Focus on robotics, AI, batteries, and hands-on technology projects. Experienced in Python, C++, TensorFlow, PyTorch, and robotics simulation.",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "TUM.ai",
+                "sameAs": "https://www.tum.ai/"
+            },
+            "knowsAbout": [
+                "Electrical Engineering",
+                "Artificial Intelligence",
+                "Batteries",
+                "Robotics",
+                "Python",
+                "C++",
+                "MATLAB",
+                "Web Development",
+                "Machine Learning"
+            ],
+            "memberOf": [
+                {
+                "@type": "Organization",
+                "name": "TUM.ai"
+                },
+                {
+                "@type": "Organization",
+                "name": "Young Entrepreneurs Excellence Program"
+                }
+            ],
+            "sameAs": [
+                "https://de.linkedin.com/",
+                "https://github.com/caroo21/hand-gesture-recognition"
+            ]
+            }
+        </script>
+    </head>
+    <body>
+        <div class="nav">
+        <div class="nav__inner">
+            <a class="nav__brand" href="/">
+            <!-- Optional logo image -->
+            <!-- <img src="/logo.svg" alt="Your brand" class="nav__logo"> -->
+            <span class="nav__brand-text">Caroline Wendlandt</span>
+            </a>
+
+            <!-- Mobile toggle -->
+            <button
+            class="nav__toggle"
+            aria-label="Menu"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            >
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            <span class="nav__bar" aria-hidden="true"></span>
+            </button>
+
+            <!-- Links -->
+            <nav id="nav-menu" class="nav__menu" aria-label="Main">
+            <a href="#Home" class="nav__link">Home</a>
+            <a href="#project__link" class="nav__link">Projects</a>
+            <a href="#skills__link" class="nav__link">Skills</a>
+            <a href="#contact__link" class="nav__link nav__cta">Contact</a>
+            <a href="https://de.linkedin.com/" target="_blank"><img class="nav__logo" src="linkedin.png" alt="LinkedIn Logo"></a>
+            </nav>
+        </div>
+        </div>
+        <h1>dkjfisjdifjsd</h1>
+        <div id="Home" class="Home md:">
+            <img src ="home_caro.jpeg" alt="a picture of me" fetchpriority="high">
+            <div class="home__text">
+                <h1 class="home__element">Caroline Wendlandt</h1>
+                <h2 class="home__element">Electrical Engineering | AI | Batteries | Robotics</h2>
+                <p class="home__element">I’m Caroline Wendlandt, an Electrical Engineering student at TUM. 
+                    I work on robotics and AI projects, building prototypes and testing systems, from first idea to reliable deployment. 
+                    I combine hands-on research experience, startup collaborations, and student initiatives with Python/C++, TensorFlow/PyTorch, 
+                    and robotics simulation. 
+                    In general I love technology and working with people.
+                    I’m motivated by technology that has an impact on the everyday lives of people.
+                </p>
+            </div>
+        </div>
+        <h2 class="category" id="project__link">Projects</h2>
+        <div id="projects" class="projects">
+            <div class="proj">
+                <img src="proj__advisor.jpeg" alt="the robot we built" fetchpriority="high">
+                <h3>Advisor</h3>
+                <p>My work included:</p>
+                <ul>
+                    <li>building the throw mechanism</li>
+                    <li>programming and testing</li>
+                    <li>project management - defining and keeping track of our milestones</li>
+                </ul>
+            </div>
+            <div class="proj">
+                <img src="proj_battery.webp" alt="sodium ion batteries" fetchpriority="high">
+                <h3>Battery aging</h3>
+                <p>Researching on the aging of sodium batteries</p>
+                <ul>
+                    <li>planning and executing experiments</li>
+                    <li>analyze SoC, SoH</li>
+                    <li> adapt degradation mode analysis - LI, LAM</li>
+                </ul>
+            </div>
+            <div class="proj">
+                <img src="proj_handgesture.jpg" alt="hands" fetchpriority="high">
+                <h3>TensorFlow Handgesture Recognition</h3>
+                <p>Building this project for fun</p>
+                <ul>
+                    <li>recoginzes e.g. a thumbs-up in a live cam</li>
+                    <li>initialize and train a cnn model</li>
+                    <li>check it <a href="https://github.com/caroo21/hand-gesture-recognition" target="_blank">out</a></li>
+                </ul>
+            </div>
+            <div class="proj">
+                <img src="proj__cellios.jpeg" alt="robot in a cell working" fetchpriority="high">
+                <h3>Cellios</h3>
+                <p>Part of the Young Entrepreneurs Excellence Program</p>
+                <ul>
+                    <li>analyzing the market and the USP</li>
+                    <li>intense teamwork, project management</li>
+                    <li>building a demonstrator</li>
+                </ul>
+            </div>
+            <div class="proj">
+                <img src="proj__tumai.jpeg" alt="team tumai discussing" fetchpriority="high">
+                <h3>TUM.ai E-Lab</h3>
+                <p>Working in this amazing team, I am responsible for the Program Structure</p>
+                <ul>
+                    <li>planning the curriculum</li>
+                    <li>reaching out to startups</li>
+                    <li>CONTACT ME if you're interested in becoming a partner</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h2 class="category" id="skills__link">Skills</h2>
+            <div class="skills-carousel">
+            <div class="carousel-track">
+                <!-- Erste Set -->
+                <div class="skill-card">
+                <h3>WebDev</h3>
+                <p>you see this website... Do you also want one? Text me!!</p>
+                </div>
+                <div class="skill-card">
+                <h3>C++</h3>
+                <p>Computer technology, algorithms and datastructures, advisor, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>Python</h3>
+                <p>Internship at Festo, Research assistant, projects, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>MATLAB</h3>
+                <p>Research assistant, system theory, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>Battery</h3>
+                <p>degradation mode analysis, SoC and SoH calculation, experiments, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>AI/ML</h3>
+                <p>projects, TUM.ai, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>Chinese</h3>
+                <p>Level B1/HSK3, exchange 2023, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>English</h3>
+                <p>obviously I can speak English, school says level B2</p>
+                </div>
+                <!--Duplikate-->
+                <div class="skill-card">
+                <h3>WebDev</h3>
+                <p>you see this website... Do you also want one? Text me!!</p>
+                </div>
+                <div class="skill-card">
+                <h3>C++</h3>
+                <p>Computer technology, algorithms and datastructures, advisor, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>Python</h3>
+                <p>Internship at Festo, Research assistant, projects, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>MATLAB</h3>
+                <p>Research assistant, system theory, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>Battery</h3>
+                <p>degradation mode analysis, SoC and SoH calculation, experiments, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>AI/ML</h3>
+                <p>projects, TUM.ai, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>Chinese</h3>
+                <p>Level B1/HSK3, exchange 2023, ...</p>
+                </div>
+                <div class="skill-card">
+                <h3>English</h3>
+                <p>obviously I can speak English, school says level B2</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <h2 class="category" id="contact__link">Contact</h2>
+        <div class="contactform">
+            <h3>Message me</h3>
+            <form id="contact-form">
+                <input type="text" id="user_name" name="user_name" placeholder="your name" required>
+                <input type="email" id="user_email" name="user_email" placeholder="your E-Mail" required>
+                <textarea name="message" id="message" placeholder="your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="footer">
+            <div class="footer__inner">
+                <div class="general_info">
+                    <h3>Caroline Wendlandt</h3>
+                    <h4>Electrical Engineering | AI | Batteries | Robotics</h4>
+                    <a href="https://de.linkedin.com/" target="_blank">LinkedIn</a>
+                </div>
+                <div class="footer__links">
+                    <a href="#Home" class="footer__link">Home</a>
+                    <a href="#project__link" class="footer__link">Projects</a>
+                    <a href="#skills__link" class="footer__link">Skills</a>
+                    <a href="#contact__link" class="footer__link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

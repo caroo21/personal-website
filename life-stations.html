@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline Wendlandt - Life Stations</title>
+    <meta name="description" content="Career journey and life stations of Caroline Wendlandt">
+    <link rel="icon" href="favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-xl font-bold text-gray-800 hover:text-blue-600 transition">
+                    Caroline Wendlandt
+                </a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+                    <a href="projects.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Projects</a>
+                    <a href="life-stations.html" class="text-blue-600 font-semibold border-b-2 border-blue-600">Life Stations</a>
+                    <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Contact</a>
+                    <a href="https://de.linkedin.com/" target="_blank" class="hover:opacity-80 transition">
+                        <img src="linkedin.png" alt="LinkedIn" class="w-6 h-6">
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="projects.html" class="block text-gray-700 hover:text-blue-600 font-medium">Projects</a>
+                <a href="life-stations.html" class="block text-blue-600 font-semibold">Life Stations</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                <a href="https://de.linkedin.com/" target="_blank" class="block text-blue-600">LinkedIn</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">My Journey</h1>
+            <p class="text-xl text-blue-100">Key milestones and experiences that shaped my path</p>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Timeline Item 1 -->
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-bold text-blue-600 mb-1 sm:mb-0 text-lg">2020 - Present</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-blue-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-blue-600 after:border-4 after:box-content after:border-gray-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <div class="text-xl font-bold text-gray-900">Technische Universität München (TUM)</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Electrical Engineering Student</h3>
+                    <p class="text-gray-600">Studying Electrical Engineering with focus on robotics, AI, and battery technology. Hands-on experience through practical courses and research projects.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-bold text-blue-600 mb-1 sm:mb-0 text-lg">2023 - Present</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-blue-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-blue-600 after:border-4 after:box-content after:border-gray-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <div class="text-xl font-bold text-gray-900">TUM.ai E-Lab</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Program Structure Lead</h3>
+                    <p class="text-gray-600">Responsible for planning the curriculum, reaching out to startups, and building partnerships. Leading a team to create impactful AI education programs.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-bold text-blue-600 mb-1 sm:mb-0 text-lg">2023</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-blue-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-blue-600 after:border-4 after:box-content after:border-gray-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <div class="text-xl font-bold text-gray-900">Exchange Semester - China</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">International Experience</h3>
+                    <p class="text-gray-600">Studied abroad in China, achieving HSK3/B1 level in Chinese. Gained cross-cultural experience and broadened my international perspective.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-bold text-blue-600 mb-1 sm:mb-0 text-lg">2022 - 2023</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-blue-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-blue-600 after:border-4 after:box-content after:border-gray-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <div class="text-xl font-bold text-gray-900">Cellios - Young Entrepreneurs Excellence Program</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Startup Team Member</h3>
+                    <p class="text-gray-600">Analyzed market opportunities and USP, worked intensively in a team on project management, and built a working demonstrator for an innovative robotics solution.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 -->
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-bold text-blue-600 mb-1 sm:mb-0 text-lg">2022</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-blue-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-blue-600 after:border-4 after:box-content after:border-gray-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <div class="text-xl font-bold text-gray-900">Research Assistant - Battery Aging</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Sodium Battery Research</h3>
+                    <p class="text-gray-600">Conducted research on sodium battery aging, planned and executed experiments, analyzed SoC and SoH, and adapted degradation mode analysis methods.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 6 -->
+            <div class="relative pl-8 sm:pl-32 py-6 group">
+                <div class="font-bold text-blue-600 mb-1 sm:mb-0 text-lg">2021</div>
+                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-blue-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-blue-600 after:border-4 after:box-content after:border-gray-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                    <div class="text-xl font-bold text-gray-900">Internship at Festo</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Python Development</h3>
+                    <p class="text-gray-600">Gained practical industry experience working with Python in an automation technology company, developing solutions for real-world engineering challenges.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Caroline Wendlandt</h3>
+                    <p class="text-gray-400 mb-4">Electrical Engineering | AI | Batteries | Robotics</p>
+                    <a href="https://de.linkedin.com/" target="_blank" class="text-blue-400 hover:text-blue-300 transition">
+                        LinkedIn →
+                    </a>
+                </div>
+                
+                <div class="flex flex-col md:items-end space-y-2">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+                    <a href="projects.html" class="text-gray-400 hover:text-white transition">Projects</a>
+                    <a href="life-stations.html" class="text-gray-400 hover:text-white transition">Life Stations</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Caroline Wendlandt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline Wendlandt - Projects</title>
+    <meta name="description" content="Projects by Caroline Wendlandt - Robotics, AI, Battery Research, and more.">
+    <link rel="icon" href="favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        .carousel-track:hover .animate-scroll {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="text-xl font-bold text-gray-800 hover:text-blue-600 transition">
+                    Caroline Wendlandt
+                </a>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+                    <a href="projects.html" class="text-blue-600 font-semibold border-b-2 border-blue-600">Projects</a>
+                    <a href="life-stations.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Life Stations</a>
+                    <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Contact</a>
+                    <a href="https://de.linkedin.com/" target="_blank" class="hover:opacity-80 transition">
+                        <img src="linkedin.png" alt="LinkedIn" class="w-6 h-6">
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-3 space-y-3">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="projects.html" class="block text-blue-600 font-semibold">Projects</a>
+                <a href="life-stations.html" class="block text-gray-700 hover:text-blue-600 font-medium">Life Stations</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+                <a href="https://de.linkedin.com/" target="_blank" class="block text-blue-600">LinkedIn</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">My Projects</h1>
+            <p class="text-xl text-blue-100">From robotics to AI - here's what I've been working on</p>
+        </div>
+    </section>
+
+    <!-- Current Projects Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-center mb-12">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mx-6 flex items-center">
+                    <span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></span>
+                    Aktuell
+                </h2>
+                <div class="flex-grow border-t border-gray-300"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Current Project 1 -->
+                <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2 border-2 border-green-200">
+                    <div class="relative">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            In Progress
+                        </div>
+                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                            <span class="text-6xl">🤖</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">AI Vision System</h3>
+                        <p class="text-gray-600 mb-4">Developing a real-time object detection system for robotics applications</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">•</span>
+                                Deep learning model optimization
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">•</span>
+                                Edge deployment testing
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">•</span>
+                                Performance benchmarking
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Current Project 2 -->
+                <div class="bg-gradient-to-br from-green-50 to-purple-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2 border-2 border-green-200">
+                    <div class="relative">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            In Progress
+                        </div>
+                        <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                            <span class="text-6xl">⚡</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Battery Management System</h3>
+                        <p class="text-gray-600 mb-4">Building an intelligent BMS for next-generation energy storage</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">•</span>
+                                State estimation algorithms
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">•</span>
+                                Thermal management integration
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">•</span>
+                                Safety protocol implementation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Current Project 3 -->
+                <div class="bg-gradient-to-br from-green-50 to-yellow-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2 border-2 border-green-200">
+                    <div class="relative">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            In Progress
+                        </div>
+                        <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                            <span class="text-6xl">🔬</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">ML-Powered Diagnostics</h3>
+                        <p class="text-gray-600 mb-4">Machine learning for predictive maintenance in industrial systems</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">•</span>
+                                Sensor data analysis
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">•</span>
+                                Anomaly detection models
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-600 mr-2">•</span>
+                                Real-time monitoring dashboard
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Projects Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-center mb-12">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mx-6">Abgeschlossene Projekte</h2>
+                <div class="flex-grow border-t border-gray-300"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Advisor -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                    <img src="proj__advisor.jpeg" alt="Advisor Robot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Advisor</h3>
+                        <p class="text-gray-600 mb-4">Building an intelligent robot system</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Building the throw mechanism
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Programming and testing
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Project management - defining and keeping track of milestones
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2: Battery Aging -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                    <img src="proj_battery.webp" alt="Battery Research" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Battery Aging</h3>
+                        <p class="text-gray-600 mb-4">Researching on the aging of sodium batteries</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Planning and executing experiments
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Analyze SoC, SoH
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Adapt degradation mode analysis - LI, LAM
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 3: Hand Gesture Recognition -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                    <img src="proj_handgesture.jpg" alt="Hand Gesture Recognition" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">TensorFlow Hand Gesture Recognition</h3>
+                        <p class="text-gray-600 mb-4">Building this project for fun</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Recognizes e.g. a thumbs-up in a live cam
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Initialize and train a CNN model
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Check it <a href="https://github.com/caroo21/hand-gesture-recognition" target="_blank" class="text-blue-600 hover:underline font-semibold">out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 4: Cellios -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                    <img src="proj__cellios.jpeg" alt="Cellios" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Cellios</h3>
+                        <p class="text-gray-600 mb-4">Part of the Young Entrepreneurs Excellence Program</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Analyzing the market and the USP
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Intense teamwork, project management
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Building a demonstrator
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 5: TUM.ai -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2">
+                    <img src="proj__tumai.jpeg" alt="TUM.ai" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">TUM.ai E-Lab</h3>
+                        <p class="text-gray-600 mb-4">Working in this amazing team, I am responsible for the Program Structure</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Planning the curriculum
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                Reaching out to startups
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-2">•</span>
+                                CONTACT ME if you're interested in becoming a partner
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">My Skills</h2>
+            
+            <!-- Skills Carousel -->
+            <div class="overflow-hidden carousel-track">
+                <div class="flex animate-scroll">
+                    <!-- First Set -->
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">WebDev</h3>
+                        <p class="text-gray-600">You see this website... Do you also want one? Text me!!</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">C++</h3>
+                        <p class="text-gray-600">Computer technology, algorithms and datastructures, advisor, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-pink-50 to-blue-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Python</h3>
+                        <p class="text-gray-600">Internship at Festo, Research assistant, projects, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">MATLAB</h3>
+                        <p class="text-gray-600">Research assistant, system theory, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Battery</h3>
+                        <p class="text-gray-600">Degradation mode analysis, SoC and SoH calculation, experiments, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-pink-50 to-blue-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">AI/ML</h3>
+                        <p class="text-gray-600">Projects, TUM.ai, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Chinese</h3>
+                        <p class="text-gray-600">Level B1/HSK3, exchange 2023, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">English</h3>
+                        <p class="text-gray-600">Obviously I can speak English, school says level B2</p>
+                    </div>
+                    
+                    <!-- Duplicate Set for seamless loop -->
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">WebDev</h3>
+                        <p class="text-gray-600">You see this website... Do you also want one? Text me!!</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">C++</h3>
+                        <p class="text-gray-600">Computer technology, algorithms and datastructures, advisor, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-pink-50 to-blue-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Python</h3>
+                        <p class="text-gray-600">Internship at Festo, Research assistant, projects, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">MATLAB</h3>
+                        <p class="text-gray-600">Research assistant, system theory, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Battery</h3>
+                        <p class="text-gray-600">Degradation mode analysis, SoC and SoH calculation, experiments, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-pink-50 to-blue-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">AI/ML</h3>
+                        <p class="text-gray-600">Projects, TUM.ai, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Chinese</h3>
+                        <p class="text-gray-600">Level B1/HSK3, exchange 2023, ...</p>
+                    </div>
+                    
+                    <div class="flex-shrink-0 w-80 mx-4 bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">English</h3>
+                        <p class="text-gray-600">Obviously I can speak English, school says level B2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Caroline Wendlandt</h3>
+                    <p class="text-gray-400 mb-4">Electrical Engineering | AI | Batteries | Robotics</p>
+                    <a href="https://de.linkedin.com/" target="_blank" class="text-blue-400 hover:text-blue-300 transition">
+                        LinkedIn →
+                    </a>
+                </div>
+                
+                <div class="flex flex-col md:items-end space-y-2">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a>
+                    <a href="projects.html" class="text-gray-400 hover:text-white transition">Projects</a>
+                    <a href="life-stations.html" class="text-gray-400 hover:text-white transition">Life Stations</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Caroline Wendlandt. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
